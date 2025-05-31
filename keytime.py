@@ -1,6 +1,7 @@
 from pynput import keyboard
 import time
 import csv
+import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 # Set tapping term threshold in seconds
@@ -141,8 +142,6 @@ print(" - key_durations.csv")
 print(" - key_overlaps.csv")
 
 print("\nTIMELINE PLOT OF KEYSTROKES:\n")
-
-import matplotlib.pyplot as plt
 
 # Load key durations from uploaded CSV
 csv_path = 'key_durations.csv'
