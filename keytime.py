@@ -140,7 +140,8 @@ print("\nResults saved to:")
 print(" - key_durations.csv")
 print(" - key_overlaps.csv")
 
-print("keydown durations per letter as follows, with tapping term of 200 ms:")
+print("\nTIMELINE PLOT OF KEYSTROKES:\n")
+
 import matplotlib.pyplot as plt
 
 # Load key durations from uploaded CSV
