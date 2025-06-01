@@ -171,7 +171,13 @@ fig, ax = plt.subplots(figsize=(12, 6))
 
 # Plot bars and collect all time ranges per key
 for kd in key_durations:
-    color = 'tab:red' if kd['duration'] > TAPPING_TERM else 'tab:blue'
+    if kd['duration'] >= TAPPING_TERM:
+        color = 'tab:red'
+    elif kd['duration'] < TAPPING_TERM and kd['duration'] >= TAPPING_TERM*.9:
+        color = 'tab:orange' 
+    else:
+        color = 'tab:gray'
+
     ax.broken_barh(
         [(kd['start'], kd['duration'])],
         (key_positions[kd['key']], 0.8),
